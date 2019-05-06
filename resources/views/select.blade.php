@@ -6,7 +6,7 @@
         <div class="col-sm-9">
             
 
-        	@foreach ($movies as $movie)
+            @foreach ($movies as $movie)
 
         <div class="form-group">
             <select class="form-control" name="type"> 
@@ -16,14 +16,14 @@
            @endforeach
 
         <div class="form-group">
-        	@foreach ($movies as $movie)
+            @foreach ($movies as $movie)
             <select class="form-control" name="year"> 
                 <option value="{{$movie->mainactor}}">{{$movie->mainactor}}</option>
             </select>
             @endforeach
         </div>
         <div class="form-group">
-        	@foreach ($movies as $movie)
+            @foreach ($movies as $movie)
             <select class="form-control" name="year"> 
                 <option value="{{$movie->director}}">{{$movie->director}}</option>
             </select>

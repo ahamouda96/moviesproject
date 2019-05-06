@@ -25,9 +25,3 @@
  
 @endsection
 
-
-
-@php
-
-
-@endphp

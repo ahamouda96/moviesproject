@@ -16,9 +16,9 @@ Route::get('/', function () {
 });
 
 
-// Route::get('/select', function () {
-//     return view('select');
-// });
+Route::get('/favoritemovie', function () {
+    return view('select');
+});
 
 Auth::routes();
 
@@ -28,13 +28,11 @@ Route::resource('/home','HomeController');
 
 Route::get('/favorites', 'FavoritesController@index');
 
-Route::get('/favorites/show', 'FavoritesController@show');
+Route::post('/favorites/show', 'FavoritesController@show');
 
 Route::resource('/movies', 'moviesController');
 
 
-Route::get('/select', 'FavoritesController@index');
-Route::post('/favorite/store', 'FavoritesController@store');
 
 
 

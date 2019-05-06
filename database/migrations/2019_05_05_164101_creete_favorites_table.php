@@ -17,10 +17,8 @@ class CreeteFavoritesTable extends Migration
             $table->increments('id');
             $table->string('type')->nullable();
             $table->string('year')->nullable();
-            $table->string('language')->nullable();
             $table->string('director')->nullable();
             $table->string('mainactor')->nullable();
-            $table->string('length')->nullable();
             $table->integer('user_id')->unsigned()->nullable()->index();
             $table->timestamps();
         });

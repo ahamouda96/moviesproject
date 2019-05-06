@@ -49,13 +49,13 @@ class MoviesController extends Controller
                 $file->move('uploads/video', $location);
                 $movie->media = $filename;
             }else{
-                return redirect('movie')->with('error');
+                return redirect('movies')->with('error');
             }
             
         }
         $movie->save();       
         Session::flash('success', 'movie was successfully added');
-        return redirect('/movie');
+        return redirect('/movies');
     }    
     public function destroy($id)
     {

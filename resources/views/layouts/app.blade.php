@@ -23,9 +23,12 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <!-- <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
-                </a>
+                </a> -->
+                <li style="list-style-type: none;"><a href="{{ url('/favorites') }}" style="text-decoration: none;"><i class="fa fa-btn fa-user"></i>Choose Favorites</a></li>
+                <li style="list-style-type: none; margin-left: 10px;"><a href="{{ url('/home') }}" style="text-decoration: none;"><i class="fa fa-btn fa-user"></i> Home</a></li>
+                 <li style="list-style-type: none;margin-left: 10px;"><a href="{{ url('/movies') }}" style="text-decoration: none;"><i class="fa fa-btn fa-user"></i>Add Movie</a></li>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -38,6 +41,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -63,10 +67,14 @@
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
+
                                     </form>
+                                    
                                 </div>
                             </li>
                         @endguest
+
+                        
                     </ul>
                 </div>
             </div>

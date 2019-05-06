@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 
 @section('content')
 
@@ -34,6 +34,76 @@
     </div>
  
 @endsection
+ -->
+
+
+
+
+
+@extends('layouts.app')
+
+@section('content')
+<meta name="csrf-token" content="{{ csrf_token() }}" />
+<link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <div class="container">
+        <div class="col-sm-9">
+            @if (Session::has('success'))
+                <div class="alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert">&times;</a>
+                    {{ Session::get('success') }}
+                </div>
+            @endif
+
+
+
+    @foreach ($movies as $movie)
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">
+                       
+                        
+                    </h3>
+                  </div>
+                  <div class="panel-body" data-toggle="lightbox">
+                    
+                    {{ $movie->body }}
+
+                        <video style='width:100%;height:600px;' controls>
+                            <source src="/uploads/video/{{$movie->media}}">
+                        </video>
+                    
+                    <br />
+                    type: <div class="badge">{{ $movie->type }}</div>
+                  </div>
+                  
+                </div>
+            @endforeach
+        </div>
+        
+    </div>
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
