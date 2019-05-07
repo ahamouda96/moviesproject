@@ -1,6 +1,6 @@
 Details
 laravel pages with the following:
-* ontrollers in website
+* Controllers
   * MoviesController
     * index function to return all movies in database and view in home page. 
     * contains create function to create new movies.
@@ -18,5 +18,23 @@ laravel pages with the following:
          return  ($score/4)*100;
          }
 
-2.	Index Action to List ALL items
-3.	SetPreferences action  (HttpGet)- with a form view to set user’s preferences, and a submit button to send that preferences to next Action (RecommendTop)
+
+
+* routes
+  * web.php
+  
+            Route::resource('/home','HomeController'); // to get all movies in project
+
+            Route::get('/favorites', 'FavoritesController@index');
+
+            Route::post('/favorites/show', 'FavoritesController@show');
+
+            Route::resource('/movies', 'moviesController');
+            
+   
+  * views
+    * favorites.blade.php 
+        * contains favorite form
+     * home.blade.php
+        * contains all movies
+            
