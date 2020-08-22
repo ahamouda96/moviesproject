@@ -51,18 +51,19 @@ class FavoritesController extends Controller
 
              $score = ($score/4)*100;
 
-             if($score == 100){
-                return view('favoritemovie')->with(compact('score', 'movies'));
-             }
-             if($score == 75){
-                return view('favoritemovie')->with(compact('score', 'movies'));
-             }
-             if($score == 50){
-                return view('favoritemovie')->with(compact('score', 'movies'));
-             }
-             if($score == 25){
-                return view('favoritemovie')->with(compact('score', 'movies'));
-             }
+             //if($score == 100){
+            //    return view('favoritemovie')->with(compact('score', 'movies'));
+            // }
+            // if($score == 75){
+            //    return view('favoritemovie')->with(compact('score', 'movies'));
+            // }
+            // if($score == 50){
+            //    return view('favoritemovie')->with(compact('score', 'movies'));
+            // }
+            // if($score == 25){
+             //   return view('favoritemovie')->with(compact('score', 'movies'));
+            // }
+             return view('favoritemovie')->with(compact('score', 'movies'));
         }   
 
     
